@@ -1,0 +1,6 @@
+<!-- header.mjml -->
+<mj-section>
+  <mj-column>
+    <mj-text>This is a header</mj-text>
+  </mj-column>
+</mj-section>
