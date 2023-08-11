@@ -1,6 +1,0 @@
-<!-- main.mjml -->
-<mjml>
-  <mj-body>
-    <mj-include path="./header.mjml" />
-  </mj-body>
-</mjml>
