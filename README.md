@@ -14,8 +14,8 @@ A step-by-step tutorial is available [here](https://medium.com/mjml-making-respo
 * `npm install` inside
 * Add your component inside `components` folder
 * Add your component to the registrations in gulpfile.babel.js
-* Use your own component in `index.mjml`
-* `npm run build` to build, or `npm start` if you want to watch recompile on change you make (to your component or to `index.mjml`)
+* Use your own component in one of the template files inside `templates`
+* `npm run build` to build, or `npm start` if you want to watch recompile on change you make
 * The result will be outputted in `index.html`
 
 

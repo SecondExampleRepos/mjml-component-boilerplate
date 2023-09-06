@@ -33,11 +33,28 @@ const compile = () => {
         registerComponent(require(fullPath).default)
       })
 
-      fs.readFile(path.normalize('./index.mjml'), 'utf8', (err, data) => {
-        if (err) throw err
+      const distDir = './dist';
+      if (!fs.existsSync(distDir)){
+        fs.mkdirSync(distDir);
+      }
+
+      const templatesDir = './templates';
+      const templates = fs.readdirSync('./templates');
+
+      // Filter the list to include only files with a .mjml extension
+      const mjmlFiles = templates.filter((file) => path.extname(file) === '.mjml');
+
+      mjmlFiles.forEach((mjmlFile) => {
+        const filePath = path.join(templatesDir, mjmlFile);
+        const newFilePath = path.join('./dist', (mjmlFile.replace('.mjml', '.html')));
+
+        const data = fs.readFileSync(filePath, 'utf8');
         const result = mjml2html(data)
-        fs.writeFileSync(path.normalize('./index.html'), result.html)
-      })
+        fs.writeFileSync(path.normalize(newFilePath), result.html)
+  
+        // You can perform actions on each MJML file here
+        console.log(`Processing ${mjmlFile}:`);
+      });
     })
 }
 
@@ -45,5 +62,5 @@ gulp.task('build', compile)
 
 gulp.task('watch', () => {
   compile()
-  return watch([path.normalize('components/**/*.js'), path.normalize('index.mjml')], compile)
+  return watch([path.normalize('components/**/*.js'), path.normalize('templates/**/*.mjml')], compile)
 })
