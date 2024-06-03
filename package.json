@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "lodash": "^4.17.15",
-    "mjml": "^4.7.1",
-    "mjml2json": "^1.0.1"
+    "@react-email/components": "^0.0.0",
+    "@react-email/render": "^0.0.0"
   }
 }
