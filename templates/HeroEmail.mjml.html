@@ -1,0 +1,29 @@
+import React from 'react';
+import { Button, Column, Container, Font, Head, Heading, Hr, Html, Image, Link, Markdown, Preview, Section, Tailwind, Text } from '@react-email/components';
+const HeroEmail = () => (
+  <Html>
+    <Head>
+      <Font fontFamily="Arial" />
+    </Head>
+    <Preview>Hero Email Preview</Preview>
+    <Tailwind>
+      <Container>
+        <Section>
+          <Column>
+            <Heading>Welcome to Our Service</Heading>
+            <Text>We are excited to have you on board.</Text>
+            <Image src="https://via.placeholder.com/150" alt="Hero Image" />
+            <Button href="https://example.com">Get Started</Button>
+          </Column>
+        </Section>
+        <Hr />
+        <Section>
+          <Column>
+            <Text>If you have any questions, feel free to <Link href="mailto:support@example.com">contact us</Link>.</Text>
+          </Column>
+        </Section>
+      </Container>
+    </Tailwind>
+  </Html>
+);
+export default HeroEmail;
