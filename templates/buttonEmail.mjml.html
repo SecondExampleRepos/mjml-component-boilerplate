@@ -1,0 +1,22 @@
+import React from 'react';
+import { Button, Column, Container, Font, Head, Heading, Hr, Html, Image, Link, Markdown, Preview, Section, Tailwind, Text } from '@react-email/components';
+const ButtonEmail = () => (
+  <Html>
+    <Head>
+      <Font />
+    </Head>
+    <Preview>Button Email</Preview>
+    <Tailwind>
+      <Container>
+        <Section>
+          <Column>
+            <Heading>Welcome to Our Service</Heading>
+            <Text>Click the button below to get started:</Text>
+            <Button href="https://example.com">Get Started</Button>
+          </Column>
+        </Section>
+      </Container>
+    </Tailwind>
+  </Html>
+);
+export default ButtonEmail;
