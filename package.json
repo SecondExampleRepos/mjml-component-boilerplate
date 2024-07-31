@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "email_templates",
   "version": "1.0.1",
   "description": "",
@@ -27,7 +27,6 @@
   },
   "dependencies": {
     "lodash": "^4.17.15",
-    "mjml": "^4.7.1",
-    "mjml2json": "^1.0.1"
+    "react-email": "^2.1.6"
   }
 }
